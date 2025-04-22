@@ -64,38 +64,27 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.navbar .logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.navbar .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
-    text-decoration: none;
-    position: relative;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    opacity: 0;
-    z-index: -1;
-    transform: skewX(-15deg) scale(0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo:hover {
-    color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-.logo:hover::before {
-    opacity: 1;
-    transform: skewX(-15deg) scale(1);
 }
 
 .nav-links {
@@ -534,6 +523,9 @@ body {
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card::before {
@@ -583,10 +575,12 @@ body {
 }
 
 .project-card p {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.5rem;
     color: var(--text-color);
     position: relative;
     z-index: 2;
+    flex: 1;
+    margin-bottom: 1.5rem;
 }
 
 .project-links {
@@ -597,11 +591,98 @@ body {
     z-index: 2;
 }
 
+.project-links .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1.2rem;
+    background: var(--gradient);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    min-height: 45px;
+}
+
+.project-links .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.project-links .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-links .btn:hover::before {
+    opacity: 1;
+}
+
+.project-links .btn span {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.project-links .btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-links .btn:hover i {
+    transform: translateX(3px);
+}
+
+.project-links .btn:first-child {
+    background: var(--gradient);
+}
+
+.project-links .btn:last-child {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.project-links .btn:last-child:hover {
+    background: var(--gradient);
+    color: var(--secondary-color);
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-links .btn {
+        width: 100%;
+    }
+}
+
 /* Contact Section */
 .contact {
     padding: 8rem 5%;
     background-color: var(--secondary-color);
     position: relative;
+    overflow: hidden;
 }
 
 .contact::before {
@@ -612,46 +693,187 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
 }
 
 .contact h2 {
     text-align: center;
-    margin-bottom: 4rem;
-    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    color: var(--primary-color);
 }
 
 .contact h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
     height: 3px;
     background: var(--gradient);
-    transform: scaleX(0.5);
-    transform-origin: center;
-    transition: transform 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .contact:hover h2::after {
-    transform: scaleX(1);
+    width: 150px;
 }
 
-.contact-form {
+.contact-description {
+    text-align: center;
     max-width: 600px;
+    margin: 0 auto 3rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
     background: var(--secondary-color);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-info:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: rotate(360deg);
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.contact-text p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.contact-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: var(--accent-color);
+}
+
+.social-links-contact {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-links-contact a {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links-contact a:hover {
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+    background: var(--secondary-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
 }
 
 .contact-form:hover {
@@ -659,46 +881,56 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem 1.2rem;
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.02);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+.form-control:focus {
     outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    background: var(--secondary-color);
 }
 
-.contact-form textarea {
+textarea.form-control {
     min-height: 150px;
     resize: vertical;
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
     background: var(--gradient);
     color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 8px;
-    transition: var(--transition);
     border: none;
-    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    z-index: 1;
 }
 
-.btn::before {
+.submit-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -707,17 +939,43 @@ body {
     height: 100%;
     background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
     opacity: 0;
-    z-index: -1;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
-.btn:hover::before {
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.submit-btn:hover::before {
     opacity: 1;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+.submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 2rem;
+    }
+    
+    .contact-item {
+        padding: 0.8rem;
+    }
+    
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
@@ -799,6 +1057,23 @@ footer {
 
     .about-text {
         padding: 1.5rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-links .btn {
+        width: 100%;
+    }
+
+    .navbar .logo-image {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .navbar .logo-text {
+        font-size: 1.5rem;
     }
 }
 
@@ -1184,5 +1459,187 @@ footer {
 
     .certificate-card {
         padding: 1.5rem;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 6rem 5%;
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    color: var(--primary-color);
+}
+
+.testimonials-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--gradient);
+    transition: all 0.3s ease;
+}
+
+.testimonials-section:hover h2::after {
+    width: 150px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.testimonial-card {
+    background: var(--secondary-color);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-card:hover::before {
+    transform: scaleX(1);
+}
+
+.testimonial-quote {
+    font-size: 2rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.testimonial-rating {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+.testimonial-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-stats {
+        gap: 2rem;
+    }
+    
+    .stat-item {
+        flex: 1 0 40%;
     }
 }

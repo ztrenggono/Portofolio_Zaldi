@@ -8,48 +8,45 @@ let isEnd = false;
 
 function typeEffect() {
     const currentWord = words[wordIndex];
+    const shouldDelete = isDeleting && charIndex > 0;
+    const shouldWrite = !isDeleting && charIndex < currentWord.length;
     
-    if (isDeleting) {
-        // Remove characters
+    if (shouldDelete) {
         charIndex--;
-    } else {
-        // Add characters
+    } else if (shouldWrite) {
         charIndex++;
     }
 
-    // Update text content
     typingText.textContent = currentWord.substring(0, charIndex);
 
-    // Typing speed
-    let typeSpeed = isDeleting ? 100 : 200;
+    let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        // Pause at end of word
-        typeSpeed = 2000;
+        typeSpeed = 2000; // Pause at word end
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500;
+        typeSpeed = 500; // Pause before starting new word
     }
 
     setTimeout(typeEffect, typeSpeed);
 }
 
-// Start typing animation when page loads
-window.addEventListener('load', () => {
-    if (typingText) {
-        typeEffect();
-    }
-});
+// Start the typing animation
+typeEffect();
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
