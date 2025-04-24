@@ -238,3 +238,43 @@ skillCards.forEach((card, index) => {
         }, 2000);
     });
 });
+
+// Loading Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.loader');
+    
+    // Hide loader after page is fully loaded
+    window.addEventListener('load', () => {
+        loader.classList.add('hidden');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    });
+});
+
+// Animate elements on scroll
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.timeline-item, .cta-content');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        
+        if (elementTop < window.innerHeight && elementBottom > 0) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+};
+
+// Initial styles for animation
+document.querySelectorAll('.timeline-item, .cta-content').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+});
+
+// Add scroll event listener
+window.addEventListener('scroll', animateOnScroll);
+// Initial check for elements in view
+animateOnScroll();
