@@ -1,6 +1,6 @@
 // Typing Text Animation
 const typingText = document.querySelector('.typing-text');
-const words = ["Web Developer", "Mobile Apps Developer", "Full-Stack Developer", "UI/UX Designer", "Content Creator"]; // Updated words
+const words = ["i'm a Web Developer", "i'm a Mobile Apps Developer", "i'm a Full-Stack Developer", "i'm a UI/UX Designer", "i'm a Content Creator"]; // Updated words
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
