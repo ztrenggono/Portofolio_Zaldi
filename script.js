@@ -1,3 +1,25 @@
+// Performance optimizations
+const debounce = (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+};
+
+// Intersection Observer with better performance
+const createIntersectionObserver = (callback, options = {}) => {
+    return new IntersectionObserver(callback, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+        ...options
+    });
+};
+
 // Typing Text Animation
 const typingText = document.querySelector('.typing-text');
 const words = ["i'm a Web Developer", "i'm a Mobile Apps Developer", "i'm a Full-Stack Developer", "i'm a student at SMK Wikrama Bogor", "i'm a freelancer"]; // Updated words
@@ -22,12 +44,12 @@ function typeEffect() {
     let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2000; // Pause at word end
+        typeSpeed = 2500; // Pause at word end
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500; // Pause before starting new word
+        typeSpeed = 700; // Pause before starting new word
     }
 
     setTimeout(typeEffect, typeSpeed);
@@ -36,7 +58,7 @@ function typeEffect() {
 // Start the typing animation
 typeEffect();
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links with performance optimization
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -50,26 +72,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect with debouncing for better performance
 const navbar = document.querySelector('.navbar');
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener('scroll', () => {
+const handleScroll = debounce(() => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-});
+}, 10);
 
-// Mobile menu toggle
+window.addEventListener('scroll', handleScroll, { passive: true });
+
+// Mobile menu toggle with better event handling
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     menuBtn.classList.toggle('fa-times');
 });
 
-// Close mobile menu when clicking outside
+// Close mobile menu when clicking outside with event delegation
 document.addEventListener('click', (e) => {
     if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
@@ -85,13 +109,13 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Intersection Observer for animations
+// Intersection Observer for animations with better performance
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = createIntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
@@ -166,11 +190,13 @@ const progressBar = document.createElement('div');
 progressBar.className = 'progress-bar';
 document.body.appendChild(progressBar);
 
-window.addEventListener('scroll', () => {
+const updateProgressBar = debounce(() => {
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (window.scrollY / windowHeight) * 100;
     progressBar.style.width = scrolled + '%';
-});
+}, 10);
+
+window.addEventListener('scroll', updateProgressBar, { passive: true });
 
 // Social Links Animation and Functionality
 const socialLinks = document.querySelectorAll('.social-links a');
