@@ -22,7 +22,7 @@ const createIntersectionObserver = (callback, options = {}) => {
 
 // Typing Text Animation
 const typingText = document.querySelector('.typing-text');
-const words = ["i'm a Web Developer", "i'm a Mobile Apps Developer", "i'm a Full-Stack Developer", "i'm a Software Engginer At SMK Wikrama Bogor", "i'm A Freelancer"]; // Updated words
+const words = ["i'm a Mobile Apps Developer", "i'm a Full-Stack Developer", "i'm a Web Developer", "i'm a Software Engginer At SMK Wikrama Bogor", "i'm A Freelancer"]; // Updated words
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -32,7 +32,7 @@ function typeEffect() {
     const currentWord = words[wordIndex];
     const shouldDelete = isDeleting && charIndex > 0;
     const shouldWrite = !isDeleting && charIndex < currentWord.length;
-    
+
     if (shouldDelete) {
         charIndex--;
     } else if (shouldWrite) {
@@ -44,7 +44,7 @@ function typeEffect() {
     let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2500; // Pause at word end
+        typeSpeed = 2700; // Pause at word end
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
@@ -121,7 +121,7 @@ const observer = createIntersectionObserver((entries) => {
             entry.target.classList.add('visible');
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
-            
+
             // Add stagger effect to skill tags
             if (entry.target.classList.contains('skill-tags')) {
                 entry.target.querySelectorAll('span').forEach((tag, index) => {
@@ -150,7 +150,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         navLinks.classList.remove('active');
         menuBtn.classList.remove('active');
-        
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -161,14 +161,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Get form data
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
-    
+
     // Here you would typically send the data to a server
     console.log('Form submitted:', data);
-    
+
     // Show success message
     alert('Thank you for your message! I will get back to you soon.');
     contactForm.reset();
@@ -179,7 +179,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px)';
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0)';
     });
@@ -218,7 +218,7 @@ socialLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const url = link.getAttribute('href');
-        
+
         // Add click animation
         link.style.transform = 'scale(0.95)';
         setTimeout(() => {
@@ -254,7 +254,7 @@ skillCards.forEach((card, index) => {
         skillCards.forEach(c => c.classList.remove('active'));
         // Add active class to clicked card
         card.classList.add('active');
-        
+
         // Add pulse animation
         card.style.transform = 'scale(0.95)';
         setTimeout(() => {
@@ -271,7 +271,7 @@ skillCards.forEach((card, index) => {
 // Loading Animation
 document.addEventListener('DOMContentLoaded', () => {
     const loader = document.querySelector('.loader');
-    
+
     // Hide loader after page is fully loaded
     window.addEventListener('load', () => {
         loader.classList.add('hidden');
@@ -284,11 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Animate elements on scroll
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.timeline-item, .cta-content');
-    
+
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementBottom = element.getBoundingClientRect().bottom;
-        
+
         if (elementTop < window.innerHeight && elementBottom > 0) {
             element.style.opacity = '1';
             element.style.transform = 'translateY(0)';

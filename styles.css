@@ -62,6 +62,7 @@ img {
 
 /* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -125,7 +126,7 @@ img {
 .navbar .logo-image {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 40%;
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
@@ -215,9 +216,20 @@ img {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.05; }
-    50% { transform: scale(1.5); opacity: 0.02; }
-    100% { transform: scale(1); opacity: 0.05; }
+    0% {
+        transform: scale(1);
+        opacity: 0.05;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.02;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.05;
+    }
 }
 
 .hero-content {
@@ -239,9 +251,17 @@ img {
 }
 
 @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .highlight {
@@ -288,8 +308,15 @@ img {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .social-links {
@@ -330,8 +357,15 @@ img {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 /* About Section */
@@ -354,8 +388,13 @@ img {
 }
 
 @keyframes gradientMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(5%, 5%); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(5%, 5%);
+    }
 }
 
 .about h2,
@@ -637,7 +676,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,0.2), transparent);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .project-card h3 {
@@ -744,7 +783,7 @@ img {
     .project-links {
         flex-direction: column;
     }
-    
+
     .project-links .btn {
         width: 100%;
     }
@@ -1035,16 +1074,16 @@ textarea.form-control {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .contact-info,
     .contact-form {
         padding: 2rem;
     }
-    
+
     .contact-item {
         padding: 0.8rem;
     }
-    
+
     .contact-icon {
         width: 35px;
         height: 35px;
@@ -1095,10 +1134,21 @@ footer {
         transform: translateY(0);
     }
 
-    .nav-links a:nth-child(1) { transition-delay: 0.1s; }
-    .nav-links a:nth-child(2) { transition-delay: 0.2s; }
-    .nav-links a:nth-child(3) { transition-delay: 0.3s; }
-    .nav-links a:nth-child(4) { transition-delay: 0.4s; }
+    .nav-links a:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links a:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links a:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links a:nth-child(4) {
+        transition-delay: 0.4s;
+    }
 
     .menu-btn {
         display: block;
@@ -1136,7 +1186,7 @@ footer {
     .project-links {
         flex-direction: column;
     }
-    
+
     .project-links .btn {
         width: 100%;
     }
@@ -1145,7 +1195,7 @@ footer {
         width: 35px;
         height: 35px;
     }
-    
+
     .navbar .logo-text {
         font-size: 1.5rem;
     }
@@ -1157,6 +1207,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1312,9 +1363,17 @@ footer {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1760,11 +1819,11 @@ footer {
     .testimonials-container {
         grid-template-columns: 1fr;
     }
-    
+
     .testimonial-stats {
         gap: 2rem;
     }
-    
+
     .stat-item {
         flex: 1 0 40%;
     }
@@ -1805,8 +1864,13 @@ footer {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Experience Section */
@@ -1944,9 +2008,10 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(51,51,51,0.9) 100%);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%);
     z-index: 1;
-    transform: skewY(0deg); /* Remove skew effect */
+    transform: skewY(0deg);
+    /* Remove skew effect */
 }
 
 .cta-content {
@@ -2090,6 +2155,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2233,7 +2299,7 @@ footer {
     .education-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .education-card.certifications {
         grid-column: 1 / -1;
         max-width: 600px;
