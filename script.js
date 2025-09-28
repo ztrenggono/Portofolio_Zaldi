@@ -185,17 +185,20 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Add scroll progress indicator
-const progressBar = document.createElement('div');
-progressBar.className = 'progress-bar';
-document.body.appendChild(progressBar);
+// Update scroll progress indicator if present in the DOM
+const progressBar = document.querySelector('.progress-bar');
 
 const updateProgressBar = debounce(() => {
+    if (!progressBar) {
+        return;
+    }
+
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (window.scrollY / windowHeight) * 100;
+    const scrolled = windowHeight > 0 ? (window.scrollY / windowHeight) * 100 : 0;
     progressBar.style.width = scrolled + '%';
 }, 10);
 
+updateProgressBar();
 window.addEventListener('scroll', updateProgressBar, { passive: true });
 
 // Social Links Animation and Functionality
