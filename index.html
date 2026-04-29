@@ -31,11 +31,12 @@
 
     <title>Zaldi Trenggono - Full-Stack & Mobile Developer Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        as="style">
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
@@ -56,7 +57,8 @@
 
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <a href="#" class="logo-container">
-            <img src="assets/images/logo1.png" alt="Personal Logo" class="logo-image">
+            <img src="assets/images/logo1.png" alt="Personal Logo" class="logo-image" width="40" height="40"
+                decoding="async" fetchpriority="high">
             <span class="logo-text">ztrenggono</span>
         </a>
         <div class="nav-links">
@@ -65,9 +67,9 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="menu-btn">
+        <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">
             <i class="fas fa-bars"></i>
-        </div>
+        </button>
     </nav>
 
     <main id="main-content">
@@ -86,8 +88,8 @@
                         aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/zaldi-trenggono-830a32345/" aria-label="LinkedIn"><i
-                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/zaldi-trenggono-830a32345/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
                     <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                     <a href="https://www.instagram.com/ztrenggono/" target="_blank" rel="noopener noreferrer"
                         aria-label="Instagram">
@@ -101,7 +103,8 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/images/ZALDI.jpg" alt="Zaldi Trenggono Profile" class="profile-img" loading="lazy">
+                    <img src="assets/images/ZALDI.jpg" decoding="async" alt="Zaldi Trenggono Profile"
+                        class="profile-img" loading="lazy">
                 </div>
                 <div class="about-text">
                     <p>Hi, I'm Zaldi Trenggono—an end-to-end web & mobile engineer who loves shipping polished
@@ -111,20 +114,6 @@
                         onboarding speed by 40%, and helping multiple early-stage teams validate ideas in weeks, not
                         months. I focus on crisp UI, resilient architecture, and measurable results for every release.
                     </p>
-                    <div class="about-metrics">
-                        <div class="metric-item">
-                            <span class="metric-number">10+</span>
-                            <span class="metric-label">Projects Delivered</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-number">5</span>
-                            <span class="metric-label">Client Partnerships</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-number">Next.js · React Native · Node.js</span>
-                            <span class="metric-label">Core Stack</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -135,21 +124,24 @@
                 high-performing websites & applications.</p>
             <div class="skills-container">
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
                     <div class="skill-info">
                         <h3>HTML5</h3>
                         <p>Web Structure</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
                     <div class="skill-info">
                         <h3>CSS3</h3>
                         <p>Styling</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
                         alt="Bootstrap">
                     <div class="skill-info">
                         <h3>Bootstrap</h3>
@@ -157,14 +149,16 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass">
                     <div class="skill-info">
                         <h3>Sass</h3>
                         <p>CSS Preprocessor</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                         alt="JavaScript">
                     <div class="skill-info">
                         <h3>JavaScript</h3>
@@ -172,21 +166,24 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="TailwindCSS">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="TailwindCSS">
                     <div class="skill-info">
                         <h3>TailwindCSS</h3>
                         <p>CSS Framework</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                     <div class="skill-info">
                         <h3>React</h3>
                         <p>Frontend Framework</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                         alt="TypeScript">
                     <div class="skill-info">
                         <h3>TypeScript</h3>
@@ -194,7 +191,8 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                         alt="Next.js">
                     <div class="skill-info">
                         <h3>Next.js</h3>
@@ -202,21 +200,24 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
                     <div class="skill-info">
                         <h3>Vue.js</h3>
                         <p>Frontend Framework</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://alpinejs.dev/alpine_long.svg" alt="Alpine.js">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://alpinejs.dev/alpine_long.svg" alt="Alpine.js">
                     <div class="skill-info">
                         <h3>Alpine.js</h3>
                         <p>JavaScript Framework</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                         alt="NodeJS">
                     <div class="skill-info">
                         <h3>Node.js</h3>
@@ -224,7 +225,8 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                         alt="Python">
                     <div class="skill-info">
                         <h3>Python</h3>
@@ -232,7 +234,8 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
                         alt="SQLite">
                     <div class="skill-info">
                         <h3>SQLite</h3>
@@ -240,7 +243,8 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                         alt="ExpressJS">
                     <div class="skill-info">
                         <h3>Express.js</h3>
@@ -248,13 +252,97 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                         alt="PostgreSQL">
                     <div class="skill-info">
                         <h3>PostgreSQL</h3>
                         <p>SQL Database</p>
                     </div>
                 </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift">
+                    <div class="skill-info">
+                        <h3>Swift</h3>
+                        <p>iOS Development</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go">
+                    <div class="skill-info">
+                        <h3>Go</h3>
+                        <p>Backend Language</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+                        alt="NestJS">
+                    <div class="skill-info">
+                        <h3>NestJS</h3>
+                        <p>Node.js Framework</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                        alt="Fastify">
+                    <div class="skill-info">
+                        <h3>Fastify</h3>
+                        <p>Web Framework</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                        alt="Laravel">
+                    <div class="skill-info">
+                        <h3>Laravel</h3>
+                        <p>PHP Framework</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                    <div class="skill-info">
+                        <h3>PHP</h3>
+                        <p>Server-side Scripting</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" alt="Neo4j">
+                    <div class="skill-info">
+                        <h3>Neo4j</h3>
+                        <p>Graph Database</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://www.vectorlogo.zone/logos/postgis/postgis-icon.svg" alt="PostGIS">
+                    <div class="skill-info">
+                        <h3>PostGIS</h3>
+                        <p>Spatial Database</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                    <div class="skill-info">
+                        <h3>Redis</h3>
+                        <p>In-memory Data Structure</p>
+                    </div>
+                </div>
+                <!-- <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                    <div class="skill-info">
+                        <h3>Docker</h3>
+                        <p>Containerization</p>
+                    </div> -->
+            </div>
+            </div>
         </section>
 
         <section id="software" class="skills-section">
@@ -263,36 +351,84 @@
                 and mobile workstreams.</p>
             <div class="skills-container">
                 <div class="skill-card">
-                    <img src="assets/images/cursor.svg" alt="Cursor">
+                    <img src="assets/images/cursor.svg" loading="lazy" decoding="async" alt="Cursor">
                     <div class="skill-info">
                         <h3>Cursor</h3>
                         <p>AI Code Editor</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                        alt="Visual Studio Code">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/trae-color.png"
+                        alt="Trae IDE">
                     <div class="skill-info">
-                        <h3>Visual Studio Code</h3>
-                        <p>Daily Code Editor</p>
+                        <h3>Trae IDE</h3>
+                        <p>Adaptive AI Code Editor</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="/assets/images/bruno.png" alt="Bruno">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
                     <div class="skill-info">
-                        <h3>Bruno</h3>
-                        <p>API Testing</p>
+                        <h3>Postman</h3>
+                        <p>API Testing & Documentation</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="assets/images/beekeeper.png" alt="Beekeeper Studio">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg" alt="Xcode">
+                    <div class="skill-info">
+                        <h3>Xcode</h3>
+                        <p>Apple Platform Development</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        style="width: 40px; height: 40px;">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M168.64 23.253c4.608 1.814 8.768 4.8 12.544 8.747 6.293 6.528 11.605 15.872 15.659 26.944 4.074 11.136 6.72 23.467 7.722 35.84a107.824 107.824 0 0143.712-13.568l1.088-.085c18.56-1.494 36.907 1.856 52.907 10.112a103.091 103.091 0 016.336 3.626c1.067-12.138 3.669-24.192 7.68-35.072 4.053-11.093 9.365-20.416 15.637-26.965a35.628 35.628 0 0112.566-8.747c5.482-2.133 11.306-2.517 16.981-.896 8.555 2.432 15.893 7.851 21.675 15.723 5.29 7.19 9.258 16.405 11.968 27.456 4.906 19.925 5.76 46.144 2.453 77.76l1.131.853.554.406c16.15 12.288 27.392 29.802 33.344 50.133 9.28 31.723 4.608 67.307-11.392 87.211l-.384.448.043.064c8.896 16.256 14.293 33.429 15.445 51.2l.043.64c1.365 22.72-4.267 45.589-17.365 68.053l-.15.213.214.512c10.069 24.683 13.226 49.536 9.344 74.368l-.128.832a13.888 13.888 0 01-15.936 11.435 13.83 13.83 0 01-11.31-10.43 13.828 13.828 0 01-.21-5.399c3.562-22.038.213-44.139-10.24-66.624a13.713 13.713 0 01.853-13.163l.085-.128c12.886-19.712 18.219-39.04 17.067-58.027-.981-16.618-6.933-32.938-17.067-48.49a13.737 13.737 0 013.84-18.902l.192-.128c5.184-3.392 9.963-12.053 12.374-23.893a90.218 90.218 0 00-2.027-42.112c-4.373-14.933-12.373-27.392-23.573-35.904-12.694-9.685-29.504-14.357-50.774-13.013a13.93 13.93 0 01-13.482-7.915c-6.699-14.187-16.47-24.341-28.651-30.635a70.145 70.145 0 00-37.803-7.082c-26.56 2.112-49.984 17.088-56.96 35.968a13.91 13.91 0 01-13.013 9.066c-22.763.043-40.384 5.376-53.269 14.998-11.136 8.32-18.731 19.946-22.742 33.877a86.824 86.824 0 00-1.45 40.235c2.389 11.904 7.061 21.76 12.416 27.072l.17.149c4.523 4.416 5.483 11.307 2.326 16.747-7.68 13.269-13.419 33.045-14.358 52.053-1.066 21.717 3.968 40.576 15.339 54.101l.341.406a13.711 13.711 0 012.027 14.72c-12.288 26.368-16.064 48.042-11.989 65.109a13.91 13.91 0 01-27.072 6.357c-5.184-21.717-1.664-46.592 10.09-74.624l.299-.746-.17-.256a92.574 92.574 0 01-12.758-27.926l-.107-.405a122.965 122.965 0 01-3.776-38.08c.939-19.413 5.931-39.296 13.27-55.253l.256-.555-.043-.043c-6.25-8.917-10.88-20.33-13.44-32.96l-.107-.512a114.176 114.176 0 011.984-53.12c5.59-19.52 16.576-36.288 32.768-48.405 1.28-.96 2.624-1.92 3.968-2.816-3.392-31.851-2.538-58.24 2.39-78.293 2.709-11.051 6.698-20.267 11.989-27.456 5.76-7.851 13.099-13.27 21.653-15.723 5.675-1.621 11.52-1.259 17.003.896v.021zm87.808 193.92c19.968 0 38.4 6.678 52.181 18.24 13.44 11.243 21.44 26.347 21.44 41.387 0 18.944-8.661 33.707-24.17 43.136-13.227 8-30.955 11.883-51.264 11.883-21.526 0-39.915-5.526-53.184-15.659-13.163-10.027-20.544-24.107-20.544-39.36 0-15.083 8.49-30.229 22.528-41.515 14.25-11.456 33.066-18.112 53.013-18.112zm0 19.115a65.498 65.498 0 00-40.875 13.867c-9.834 7.893-15.402 17.813-15.402 26.666 0 9.131 4.48 17.686 13.013 24.192 9.707 7.403 23.979 11.691 41.451 11.691 17.045 0 31.424-3.136 41.216-9.088 9.877-5.973 14.933-14.635 14.933-26.816 0-9.024-5.248-18.987-14.571-26.795-10.325-8.64-24.32-13.717-39.765-13.717zm14.123 25.813l.085.086a7.431 7.431 0 01-1.195 10.453l-6.229 4.907v9.514a7.999 7.999 0 01-8.021 7.958 8.004 8.004 0 01-8.022-7.958v-9.813l-5.781-4.651a7.4 7.4 0 01-1.109-10.453 7.53 7.53 0 0110.538-1.088l4.587 3.669 4.693-3.712a7.533 7.533 0 0110.454 1.088zm-107.52-40.938c10.197 0 18.496 8.32 18.496 18.581a18.564 18.564 0 01-18.518 18.581 18.559 18.559 0 01-18.496-18.56 18.565 18.565 0 015.399-13.129 18.609 18.609 0 0113.119-5.473zm185.728 0c10.24 0 18.517 8.32 18.517 18.581a18.559 18.559 0 01-18.517 18.581 18.56 18.56 0 01-18.496-18.56 18.56 18.56 0 0118.496-18.602zM158.72 49.067l-.064.042a14.06 14.06 0 00-6.08 5.078l-.107.128c-2.944 4.032-5.504 9.962-7.424 17.749-3.626 14.763-4.608 34.795-2.645 59.349 9.173-2.73 19.179-4.437 29.952-5.056l.213-.021.406-.725a69.41 69.41 0 013.157-5.099c2.624-16.448.469-36.096-5.397-52.139-2.859-7.765-6.336-13.866-9.664-17.344a13.403 13.403 0 00-2.283-1.92l-.064-.042zm195.712.853l-.043.021a13.396 13.396 0 00-2.282 1.92c-3.328 3.478-6.827 9.6-9.664 17.366-6.187 16.938-8.256 37.888-4.907 54.869l1.237 2.069.171.299h.64a110.599 110.599 0 0131.275 4.523c1.834-23.979.81-43.584-2.731-58.07-1.92-7.786-4.48-13.717-7.445-17.749l-.086-.128a14.054 14.054 0 00-6.08-5.099h-.085v-.021z"
+                            fill="#000" />
+                    </svg>
+                    <div class="skill-info">
+                        <h3>Ollama</h3>
+                        <p>Local LLM Runner</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/77/Qgis-icon-3.0.png" alt="QGIS">
+                    <div class="skill-info">
+                        <h3>QGIS</h3>
+                        <p>Geographic Information System</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/codex-color.png"
+                        alt="Codex">
+                    <div class="skill-info">
+                        <h3>Codex</h3>
+                        <p>AI Development Helper</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://opencode.ai/_build/assets/preview-opencode-logo-dark-ZBwNGoYp.png" alt="OpenCode">
+                    <div class="skill-info">
+                        <h3>OpenCode</h3>
+                        <p>Open Source Collaboration</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/beekeeper.png" loading="lazy" decoding="async" alt="Beekeeper Studio">
                     <div class="skill-info">
                         <h3>Beekeeper Studio</h3>
                         <p>Database Management</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                         alt="Docker">
                     <div class="skill-info">
                         <h3>Docker</h3>
@@ -300,14 +436,16 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
                     <div class="skill-info">
                         <h3>Git</h3>
                         <p>Version Control</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                         alt="GitHub">
                     <div class="skill-info">
                         <h3>GitHub</h3>
@@ -315,7 +453,8 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
                         alt="Android Studio">
                     <div class="skill-info">
                         <h3>Android Studio</h3>
@@ -323,14 +462,16 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg" alt="Expo">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg" alt="Expo">
                     <div class="skill-info">
                         <h3>Expo</h3>
                         <p>React Native Tooling</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
                         alt="Vercel">
                     <div class="skill-info">
                         <h3>Vercel</h3>
@@ -338,28 +479,37 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://railway.com/brand/logo-dark.svg" alt="Railway">
+                    <div class="skill-info">
+                        <h3>Railway</h3>
+                        <p>Cloud Infrastructure</p>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
                     <div class="skill-info">
                         <h3>Figma</h3>
                         <p>UI/UX Collaboration</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="/assets/images/warp.jpg" alt="Warp">
+                    <img src="assets/images/warp.jpg" loading="lazy" decoding="async" alt="Warp">
                     <div class="skill-info">
                         <h3>Warp Terminal</h3>
                         <p>Developer CLI</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="/assets/images/jadx.png" alt="JADX">
+                    <img src="assets/images/jadx.png" loading="lazy" decoding="async" alt="JADX">
                     <div class="skill-info">
                         <h3>JADX</h3>
                         <p>APK Reverse Engineering</p>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <img src="/assets/images/windterm.png" alt="WindTerm">
+                    <img src="assets/images/windterm.png" loading="lazy" decoding="async" alt="WindTerm">
                     <div class="skill-info">
                         <h3>WindTerm</h3>
                         <p>Server Monitoring</p>
@@ -378,7 +528,7 @@
                     <div class="certificate-content">
                         <div class="certificate-header">
                             <h3>Full-Stack Class Certificate</h3>
-                            <span class="certificate-badge">Full-Stack</span>
+                            <span class="certificate-badge">Full-Stack Course</span>
                         </div>
                         <div class="certificate-meta">
                             <span class="certificate-issuer">Codepolitan</span>
@@ -386,7 +536,7 @@
                         </div>
                         <p class="certificate-description">Complete full-stack course covering frontend and backend
                             technologies.</p>
-                        <a href="https://www.codepolitan.com/coders/zaldiiii/" class="certificate-link">View Certificate
+                        <a href="https://www.codepolitan.com/coders/zaldiiii/" class="certificate-link" target="_blank" rel="noopener noreferrer">View Certificate
                             <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
@@ -397,17 +547,18 @@
                     </div>
                     <div class="certificate-content">
                         <div class="certificate-header">
-                            <h3>Cryptography for Beginner</h3>
-                            <span class="certificate-badge">Course</span>
+                            <h3>List Full Of My Certificates</h3>
+                            <span class="certificate-badge">Galery</span>
                         </div>
                         <div class="certificate-meta">
                             <span class="certificate-issuer">Cyber Academy</span>
-                            <span class="certificate-date">2025</span>
+                            <span class="certificate-date">2025-2026</span>
                         </div>
-                        <p class="certificate-description">Comprehensive course on classical cryptography in Cyber
-                            Academy.</p>
-                        <a href="#" class="certificate-link">View Certificate <i
-                                class="fas fa-external-link-alt"></i></a>
+                        <p class="certificate-description">List a full of my certificates in Technology Field,
+                            Information Security etc.</p>
+                        <a href="https://jurnalku.smkwikrama.sch.id/explore/12511418?tab=certificates"
+                            class="certificate-link" target="_blank" rel="noopener noreferrer">View Certificate
+                            <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
@@ -453,113 +604,262 @@
             </div>
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="assets/images/e-ticketing.png" alt="E-Ticketing Application Design" class="project-image"
-                        loading="lazy">
+                    <img src="assets/images/e-ticketing.png" decoding="async" alt="E-Ticketing Application Design"
+                        class="project-image" loading="lazy">
                     <h3>E-Ticketing Application</h3>
                     <p>Automated WiFi support requests, voucher rotation, and device provisioning with React, Express,
                         and PostgreSQL—cutting manual support touchpoints nearly in half.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>React</span>
+                        <span>Express</span>
+                        <span>PostgreSQL</span>
+                    </div>
                     <div class="project-links">
                         <a href="#" class="btn"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/e-ticketing" class="btn"><i
+                        <a href="https://github.com/ztrenggono/e-ticketing" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/kanayaweb.png" alt="Kanaya Website Design" class="project-image"
-                        loading="lazy">
+                    <img src="assets/images/kanayaweb.png" decoding="async" alt="Kanaya Website Design"
+                        class="project-image" loading="lazy">
                     <h3>Kanaya Website</h3>
                     <p>Marketing site revamp highlighting geo-targeted packages and onboarding form flows, which tripled
                         qualified leads within the first month of launch.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Next.js</span>
+                        <span>TailwindCSS</span>
+                        <span>Vercel</span>
+                    </div>
                     <div class="project-links">
                         <a href="#" class="btn"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/kanayaweb2.git" class="btn"><i
+                        <a href="https://github.com/ztrenggono/kanayaweb2.git" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/ztudentpack.png" alt="Ztudentpack Design" class="project-image"
-                        loading="lazy">
+                    <img src="assets/images/ztudentpack.png" decoding="async" alt="Ztudentpack Design"
+                        class="project-image" loading="lazy">
                     <h3>Ztudentpack</h3>
                     <p>Digital marketplace for premium Notion templates with secure checkout, gated previews, and
                         lifecycle email hooks that keep repeat purchase rates above 35%.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Web App</span>
+                        <span>Checkout</span>
+                        <span>Email Flow</span>
+                    </div>
                     <div class="project-links">
                         <a href="#" class="btn"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/kanaya" class="btn"><i
+                        <a href="https://github.com/ztrenggono/kanaya" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/Dompetku.png" alt="DompetKu Preview" class="project-image" loading="lazy">
+                    <img src="assets/images/Dompetku.png" decoding="async" alt="DompetKu Preview" class="project-image"
+                        loading="lazy">
                     <h3>DompetKu</h3>
                     <p>Command-line personal finance assistant that nudges disciplined saving through auto-budgeting,
                         transaction history, and smart reminders.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>CLI</span>
+                        <span>Finance</span>
+                        <span>Automation</span>
+                    </div>
                     <div class="project-links">
                         <a href="#" class="btn"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
                         <a href="#" class="btn"><i class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/cek_khodam.png" alt="Portal Mistis Design" class="project-image"
-                        loading="lazy">
+                    <img src="assets/images/cek_khodam.png" decoding="async" alt="Portal Mistis Design"
+                        class="project-image" loading="lazy">
                     <h3>Portal Mistis</h3>
                     <p>Portal web interaktif untuk mengungkap khodam penuntunmu dengan gaya mistis modern. Dibangun
                         menggunakan HTML, TailwindCSS CDN, dan JavaScript dengan dukungan SweetAlert2, tsParticles, dan
                         Animate.css.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>HTML</span>
+                        <span>TailwindCSS</span>
+                        <span>JavaScript</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://ztrenggono.github.io/Cek-khodam/" class="btn"><i
+                        <a href="https://ztrenggono.github.io/Cek-khodam/" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/Cek-khodam" class="btn"><i
+                        <a href="https://github.com/ztrenggono/Cek-khodam" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/tarot.png" alt="Tarot Reading Vision" class="project-image" loading="lazy">
+                    <img src="assets/images/tarot.png" decoding="async" alt="Tarot Reading Vision" class="project-image"
+                        loading="lazy">
                     <h3>Tarot Reading Vision</h3>
-                    <p>A Spotify playlist generator that creates personalized music based on your mood. Features mood
-                        analysis and genre filtering. Built with React and Node.js.</p>
+                    <p>Single-page tarot reading web app with a mystical interface, 78-card exploration, and interactive
+                        reading flow for reflective digital experiences.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://ztrenggono.github.io/Tarot-Reading/" class="btn"><i
+                        <a href="https://ztrenggono.github.io/Tarot-Reading/" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/Tarot-Reading" class="btn"><i
+                        <a href="https://github.com/ztrenggono/Tarot-Reading" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fab fa-github"></i><span>Source Code</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/tarot.png" alt="Tarot Reading Vision" class="project-image" loading="lazy">
-                    <h3>Tarot Reading Vision</h3>
-                    <p>A Spotify playlist generator that creates personalized music based on your mood. Features mood
-                        analysis and genre filtering. Built with React and Node.js.</p>
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1776046951_SCR-20260413-igas.png"
+                        decoding="async" alt="GudangKu STS Production Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>GudangKu - STS PROD</h3>
+                    <p>Platform manajemen stok gudang untuk mencatat item, memantau persediaan, dan membantu proses
+                        operasional gudang berjalan lebih rapi.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Inventory</span>
+                        <span>Dashboard</span>
+                        <span>Vercel</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://ztrenggono.github.io/Tarot-Reading/" class="btn"><i
+                        <a href="https://gudang-ku-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/Tarot-Reading" class="btn"><i
-                                class="fab fa-github"></i><span>Source Code</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a187d0c5-c7a8-4ede-871f-32d9bf580ade/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/tarot.png" alt="Tarot Reading Vision" class="project-image" loading="lazy">
-                    <h3>Tarot Reading Vision</h3>
-                    <p>A Spotify playlist generator that creates personalized music based on your mood. Features mood
-                        analysis and genre filtering. Built with React and Node.js.</p>
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1772376378_SCR-20260301-svgq.png"
+                        decoding="async" alt="Relestari Competition Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>Relestari - Competition Techcomfest 2025</h3>
+                    <p>Platform inovatif untuk menukar barang bekas layak pakai, menghubungkan pengguna yang ingin
+                        berbagi manfaat sekaligus mendukung gaya hidup berkelanjutan.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Competition</span>
+                        <span>Sustainability</span>
+                        <span>Web App</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://ztrenggono.github.io/Tarot-Reading/" class="btn"><i
+                        <a href="https://relestari.my.id" target="_blank" rel="noopener noreferrer" class="btn"><i
                                 class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/Tarot-Reading" class="btn"><i
-                                class="fab fa-github"></i><span>Source Code</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a1325a71-7733-4183-a6c0-bcfb85312b6b/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/images/tarot.png" alt="Tarot Reading Vision" class="project-image" loading="lazy">
-                    <h3>Tarot Reading Vision</h3>
-                    <p>A Spotify playlist generator that creates personalized music based on your mood. Features mood
-                        analysis and genre filtering. Built with React and Node.js.</p>
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1772376264_SCR-20260301-susc.png"
+                        decoding="async" alt="EquiTalk Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>EquiTalk</h3>
+                    <p>Accessible mental health counseling platform for real-time, barrier-free communication so users
+                        can reach support through a more inclusive digital experience.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Mental Health</span>
+                        <span>Realtime</span>
+                        <span>Accessibility</span>
+                    </div>
                     <div class="project-links">
-                        <a href="https://ztrenggono.github.io/Tarot-Reading/" class="btn"><i
-                                class="fas fa-external-link-alt"></i><span>View Project</span></a>
-                        <a href="https://github.com/ztrenggono/Tarot-Reading" class="btn"><i
-                                class="fab fa-github"></i><span>Source Code</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a13259c4-e988-487a-8b77-1e692db2ff05/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
                     </div>
                 </div>
+                <div class="project-card">
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1772376134_SCR-20260301-sttb.jpeg"
+                        decoding="async" alt="Talentiq Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>Talentiq</h3>
+                    <p>Decision-support platform for HR and managers to monitor productivity, work quality, and team
+                        performance through a focused operational dashboard.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Dashboard</span>
+                        <span>HR Tech</span>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://talentiq-frontend-sby5.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a1325900-0870-4051-9bfb-8eb8a3b4e3b9/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1763548231_Screenshot 2025-11-19 at 17-27-56 Produktiva.png"
+                        decoding="async" alt="Produktiva Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>Produktiva</h3>
+                    <p>Student productivity management system with an integrated dashboard, Kanban-style task flow, and
+                        workspace tools for tracking learning progress.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Productivity</span>
+                        <span>Kanban</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://produktiva.vercel.app" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a064ce9a-8df0-4af0-9ba0-3667f9bd615f/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1759189600_Screenshot 2025-09-30 at 06-42-42 Summarizer Simple And Minimalist.png"
+                        decoding="async" alt="Private Summarizer Web App Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>Private Summarizer Web App</h3>
+                    <p>Lightweight browser-based text summarizer for turning long-form writing into concise summaries
+                        while keeping the interface simple and private.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>JavaScript</span>
+                        <span>Text Tool</span>
+                        <span>GitHub Pages</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ztrenggono.github.io/Private-Summarizer/" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/9fff5326-6ee3-4c39-82f1-b7a993100870/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1764422033_Screenshot 2025-11-29 at 20-10-33 Vite App.png"
+                        decoding="async" alt="Laporin Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>Laporin</h3>
+                    <p>Web application for simplifying and automating report workflows, helping users submit, manage,
+                        and follow up operational reports from one interface.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>Vite</span>
+                        <span>Reporting</span>
+                        <span>Workflow</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a07926da-ef82-4499-95d2-0ae18090f420/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://is3.cloudhost.id/disk4pps-wk/jurnalku/portfolios/1764422445_Screenshot 2025-11-29 at 20-16-52 EskulGo - Absensi eskul sekolah.png"
+                        decoding="async" alt="EskulGO Wikrama Project Preview" class="project-image"
+                        loading="lazy" referrerpolicy="no-referrer">
+                    <h3>EskulGO Wikrama</h3>
+                    <p>School extracurricular management system built to support activity administration, attendance,
+                        and structured coordination for student organizations.</p>
+                    <div class="project-tags" aria-label="Project technologies">
+                        <span>School System</span>
+                        <span>Attendance</span>
+                        <span>Web App</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://jurnalku.smkwikrama.sch.id/portfolio/a079294f-5cf8-44a4-ba99-1049defc4ab9/detail" target="_blank" rel="noopener noreferrer" class="btn"><i
+                                class="fas fa-info-circle"></i><span>Project Detail</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-archive-cta">
+                <a href="https://jurnalku.smkwikrama.sch.id/explore/12511418?tab=portfolio" target="_blank"
+                    rel="noopener noreferrer" class="btn primary-btn">
+                    <span>View All Portfolio on Jurnalku</span>
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
         </section>
     </main>
@@ -580,7 +880,7 @@
                 </div>
                 <div class="testimonial-author">
                     <div class="author-image">
-                        <img src="assets/images/rizal.jpg" alt="Rizal Trenggono">
+                        <img src="assets/images/rizal.jpg" loading="lazy" decoding="async" alt="Rizal Trenggono">
                     </div>
                     <div class="author-info">
                         <h4>Rizal Trenggono</h4>
@@ -607,7 +907,8 @@
                 </div>
                 <div class="testimonial-author">
                     <div class="author-image">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                        <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                            src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
                     </div>
                     <div class="author-info">
                         <h4>Rivan Wijaya</h4>
@@ -633,7 +934,8 @@
                 </div>
                 <div class="testimonial-author">
                     <div class="author-image">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen">
+                        <img loading="lazy" decoding="async" referrerpolicy="no-referrer"
+                            src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen">
                     </div>
                     <div class="author-info">
                         <h4>Michael Chen</h4>
@@ -656,7 +958,7 @@
                 <div class="stat-label">Client Satisfaction</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">10+</div>
+                <div class="stat-number">15+</div>
                 <div class="stat-label">Projects Completed</div>
             </div>
             <div class="stat-item">
@@ -684,8 +986,8 @@
                 <div class="education-content">
                     <ul class="education-details">
                         <li>Juara 3 Event Maca Expo SDIT Insantama Lomba Membuat Poster SD-SMA</li>
-                        <li>Academic Excellence Award</li>
-                        <li>Student Council President</li>
+                        <li>Juara 2 Pada Futsal Tingkat Sederajat</li>
+                        <!-- <li>Student Council President</li> -->
                     </ul>
                 </div>
             </div>
@@ -703,9 +1005,9 @@
                 </div>
                 <div class="education-content">
                     <ul class="education-details">
-                        <li>Juara 2x Berturut-turut Lomba Membuat Poster Digital Event 17 Agustus</li>
-                        <li>Academic Excellence Award</li>
-                        <li>Student Council President</li>
+                        <li>Juara 2 Lomba Membuat Poster Digital Event 17 Agustus</li>
+                        <li>Juara 2 Lomba Membuat Poster Digital Event Pensi</li>
+                        <!-- <li>Student Council President</li> -->
                     </ul>
                 </div>
             </div>
@@ -724,9 +1026,9 @@
                 </div>
                 <div class="education-content">
                     <ul class="education-details">
-                        <li>Pengembangan Perangkat Lunak dan Gim</li>
-                        <li>Academic Excellence Award</li>
-                        <li>Student Council President</li>
+                        <li>Juara 2 Pada Lomba Bizznovation 2025</li>
+                        <li>Juara Harapan 1 Lomba BMC Universitas Trilogi 2025</li>
+                        <li>Best Sprit Web Dev At Techcomfest 2025</li>
                     </ul>
                 </div>
             </div>
@@ -824,7 +1126,7 @@
         <p>&copy; 2025 Zaldi Trenggono. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

@@ -61,13 +61,30 @@ typeEffect();
 // Smooth scrolling for navigation links with performance optimization
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        if (href === '#' || !href) return;
+
+        try {
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                // Close mobile menu if open
+                if (navLinks) navLinks.classList.remove('active');
+                if (menuBtn) {
+                    menuBtn.classList.remove('fa-times');
+                    menuBtn.classList.remove('active');
+                }
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } catch (error) {
+            // Not a valid selector, let the default behavior happen if it's not a hash link
+            if (href.startsWith('#')) {
+                console.warn('Invalid hash link selector:', href);
+            }
         }
     });
 });
@@ -142,19 +159,6 @@ document.querySelectorAll('.section-header, .about-text, .skills, .project-card,
         el.style.transition = `all 0.5s ease ${index * 0.1}s`;
     }
     observer.observe(el);
-});
-
-// Smooth scrolling for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        navLinks.classList.remove('active');
-        menuBtn.classList.remove('active');
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
 });
 
 // Form submission handling
@@ -271,6 +275,7 @@ skillCards.forEach((card, index) => {
 // Loading Animation
 document.addEventListener('DOMContentLoaded', () => {
     const loader = document.querySelector('.loader');
+    if (!loader) return;
 
     // Hide loader after page is fully loaded
     window.addEventListener('load', () => {
